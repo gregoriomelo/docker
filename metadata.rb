@@ -9,4 +9,4 @@ version          '0.1.0'
 
 recipe 'docker', 'Installs Docker'
 
-support 'ubuntu'
+supports 'ubuntu'
