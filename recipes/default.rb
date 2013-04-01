@@ -4,7 +4,7 @@
 #
 # Copyright 2013, @gregoriomelo
 kernel_version = `uname -r`
-package "linux-image-extra-#{k}"
+package "linux-image-extra-#{kernel_version}"
 
 %w{lxc wget bsdtar curl}.each do |pkg|
   package pkg
