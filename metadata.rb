@@ -1,5 +1,5 @@
 name             'docker'
-provaides        'docker'
+provides        'docker'
 maintainer       'Gregório Melo'
 maintainer_email 'https://github.com/gregoriomelo'
 license          'All rights reserved'
