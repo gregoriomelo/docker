@@ -1,4 +1,4 @@
-docker-cookbook Cookbook
+docker cookbook
 ========================
 Cookbook for [docker](http://docker.io)
 
@@ -10,14 +10,14 @@ Requirements
 
 Usage
 -----
-#### docker-cookbook::default
-Just include `docker-cookbook` in your node's `run_list`:
+#### docker::default
+Just include `docker` in your node's `run_list`:
 
 ```json
 {
   "name":"my_node",
   "run_list": [
-    "recipe[docker-cookbook]"
+    "recipe[docker]"
   ]
 }
 ```

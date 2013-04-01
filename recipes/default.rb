@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: docker-cookbook
+# Cookbook Name:: docker
 # Recipe:: default
 #
 # Copyright 2013, @gregoriomelo
