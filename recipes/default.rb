@@ -3,7 +3,10 @@
 # Recipe:: default
 #
 # Copyright 2013, @gregoriomelo
-%w{lxc wget bsdtar curl linux-image-extra-$(uname -r)}.each do |pkg|
+kernel_version = `uname -r`
+package "linux-image-extra-#{k}"
+
+%w{lxc wget bsdtar curl}.each do |pkg|
   package pkg
 end
 
