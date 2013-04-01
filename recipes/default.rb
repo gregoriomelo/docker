@@ -3,7 +3,7 @@
 # Recipe:: default
 #
 # Copyright 2013, @gregoriomelo
-%w{lxc wget bsdtar curl linux-image-extra-`uname -r`}.each do |pkg|
+%w{lxc wget bsdtar curl linux-image-extra-$(uname -r)}.each do |pkg|
   package pkg
 end
 
