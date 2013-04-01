@@ -11,9 +11,9 @@ package "linux-image-extra-#{kernel_version}"
 end
 
 bash "install_docker" do
-  not_if "which #{node[:docker][:installation_folder]}/#{node[:docker][:binary_name]}"
+  not_if "which #{node[:docker][:installation_folder]}/docker-master/#{node[:docker][:binary_name]}"
   user "root"
-  cwd "/opt/"
+  cwd node[:docker][:installation_folder]
   code <<-EOH
     wget http://get.docker.io/builds/$(uname -s)/$(uname -m)/docker-master.tgz
     tar -xf docker-master.tgz
