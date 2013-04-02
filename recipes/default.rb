@@ -17,5 +17,6 @@ bash "install_docker" do
   code <<-EOH
     wget http://get.docker.io/builds/$(uname -s)/$(uname -m)/docker-master.tgz
     tar -xf docker-master.tgz
+    echo "export PATH=\$PATH:`pwd`" >> /etc/profile
   EOH
 end
