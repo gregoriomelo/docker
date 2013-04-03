@@ -1,2 +1,1 @@
-default[:docker][:installation_folder] = "/opt"
-default[:docker][:binary_name] = "docker"
+default[:docker][:install_dir] = "/opt/docker"
