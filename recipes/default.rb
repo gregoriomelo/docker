@@ -2,7 +2,7 @@
 # Cookbook Name:: docker
 # Recipe:: default
 #
-# Copyright 2013, @gregoriomelo
+# Copyright 2013, @gregoriomelo, @sergegebhardt
 kernel_version = `uname -r`
 package "linux-image-extra-#{kernel_version}"
 
@@ -28,9 +28,9 @@ remote_file tarball_path do
 end
 
 execute "install_docker" do
+    not_if { ::File.exists?("#{node[:docker][:install_dir]}/#{binary_name}") }
     user "root"
     command "tar -xf #{tarball_path} --strip-components 1 -C #{node[:docker][:install_dir]}"
-    not_if { ::File.exists?("#{node[:docker][:install_dir]}/#{binary_name}") }
 end
 
 ruby_block "append to PATH" do
