@@ -1,4 +1,4 @@
-docker cookbook
+docker cookbook - A docker cookbook for Chef
 ========================
 Cookbook for [docker](http://docker.io)
 
