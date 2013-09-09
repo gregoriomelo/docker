@@ -5,6 +5,11 @@
 # Copyright 2013, @gregoriomelo, @sergegebhardt
 kernel_version = `uname -r`
 
+execute "apt-get-update" do
+  ignore_failure true
+  command "apt-get update"
+end
+
 apt_repository "docker" do
   uri "https://get.docker.io/ubuntu"
   distribution "docker"
