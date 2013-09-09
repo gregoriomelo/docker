@@ -12,6 +12,6 @@ apt_repository "docker" do
   key "http://get.docker.io/gpg"
 end
 
-%W{linux-image-extra-#{kernel_version} lxcdocker}.each do |pkg|
+%W{linux-image-extra-#{kernel_version} lxc-docker}.each do |pkg|
   package pkg
 end
