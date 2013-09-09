@@ -9,4 +9,6 @@ version          '0.1.0'
 
 recipe 'docker', 'Installs Docker'
 
+depends "apt"
+
 supports 'ubuntu'
